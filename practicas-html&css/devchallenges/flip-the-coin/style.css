@@ -1,0 +1,74 @@
+:root{
+    --dark-blue: #2a2f3f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #404A65;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.title{
+    color: #efefef;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 
+    -5px -5px 0 var(--dark-blue), 0 -5px 0 var(--dark-blue), 5px -5px 0 var(--dark-blue),
+    -5px 0 0 var(--dark-blue), 0 0 0 var(--dark-blue), 5px 0 0 var(--dark-blue),
+    -5px 5px 0 var(--dark-blue), 0 5px 0 var(--dark-blue), 5px 5px 0 var(--dark-blue)
+    ;
+    
+}
+
+.instructions{
+    margin-bottom: 40px;
+    color: #ededed;
+}
+
+.coin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin .img{
+    width: 100px;
+    margin-bottom: 25px;
+}
+
+.coin .shadow{
+    width: 65px;
+    margin-bottom: 35px;
+}
+
+.result{
+    margin-bottom: 50px;
+}
+
+#flip-button{
+    padding: 12px 40px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #237aca;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 4px 4px 0 #215e97;
+    letter-spacing: 1px;
+}
+
+#flip-button:active{
+    translate: 4px 4px;
+    box-shadow: none;
+}
