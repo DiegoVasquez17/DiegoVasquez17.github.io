@@ -3,6 +3,7 @@ const coin = document.querySelector(".img-container");
 const heads = coin.children[0]; // img with class "heads"
 const tails = coin.children[1]; // img with class "tails"
 const txtResult = document.querySelector(".result")
+const shadow = document.querySelector(".shadow");
 const btnFlip = document.getElementById("flip-button");
 
 let spins; // it will store the random spins calculated every button click
@@ -31,9 +32,11 @@ function flipCoin(){
         // spins has a different scope to duration, since spins needs
         // to be used outside of this function too.
         coin.style.setProperty("--spins", spins)
+        shadow.style.setProperty("--spins", spins)
 
         heads.style.animationDuration = `${duration}s`;
         tails.style.animationDuration = `${duration}s`;
+        shadow.style.animationDuration = `${duration}s`;
 
         // In the style.css file, a nonexistent class named 'animate' is styled 
         // and assigned with a css keyframe animation. The following lines add 
@@ -41,6 +44,7 @@ function flipCoin(){
         // animation starts.
         heads.classList.add("animate");
         tails.classList.add("animate");        
+        shadow.classList.add("animate");
     }
 
 }
@@ -66,6 +70,7 @@ heads.addEventListener("animationend", ()=> {
     btnFlip.removeAttribute("disabled")
     heads.classList.remove("animate");
     tails.classList.remove("animate");  
+    shadow.classList.remove("animate");
 
     // This condition evaluates if the number of spins were even or not
     if (spins % 2 != 0){
